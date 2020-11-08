@@ -2,7 +2,9 @@
     "name": "fornt-end1",
     "version": "1.0.0",
     "dependencies": {
-        "bootstrap": "^4.5.3",
+        "bootstrap": "^4.5.3"
+    },
+    "devDependencies": {
         "browser-sync": "^2.26.13"
     }
 }
