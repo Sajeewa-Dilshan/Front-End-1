@@ -1,21 +1,12 @@
-
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8">
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="DEP6">
 
-    <title>DEP Web POS FrontEnd</title>
-
-
-
-    <!-- Bootstrap core CSS -->
+    <meta name="author" content="DEP">
+    <title>DEP Web POS - Customers</title>
     <link href="node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
-
-    <!-- Favicons -->
-
 
 
     <style>
@@ -48,27 +39,29 @@
 
 
         .welcome{
+            overflow: hidden;
             color: #007bff;
             animation-name: color;
             animation-duration:20s;
             animation-iteration-count: infinite;
+
         }
 
         @keyframes color {
             0% {
                 color: orangered;
-                transform: scale(1.2);
+
             }
             20% {
                 color: orange;
-                transform: scale(1);
+
             }
             80% {
                 color: yellow;
             }
             100% {
                 color: green;
-                transform: scale(1.2);
+
             }
         }
 
@@ -77,9 +70,9 @@
 
                 transform: scale(1);
             }
-           50%{
-               transform: scale(1.2);
-           }
+            50%{
+                transform: scale(1.2);
+            }
 
             100% {
 
@@ -115,8 +108,6 @@
 
 
     </style>
-    <!-- Custom styles for this template -->
-    <link href="/css/dashboard.css" rel="stylesheet">
 </head>
 <body>
 <nav class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0 shadow">
@@ -124,7 +115,7 @@
     <button class="navbar-toggler position-absolute d-md-none collapsed" type="button" data-toggle="collapse" data-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
-   <!-- <input class="form-control form-control-dark w-100" type="text" placeholder="Search" aria-label="Search">-->
+    <!-- <input class="form-control form-control-dark w-100" type="text" placeholder="Search" aria-label="Search">-->
     <h1 class="welcome">Welcome to DEP6 Pos System </h1>
     <ul class="navbar-nav px-3">
         <li class="nav-item text-nowrap">
@@ -132,35 +123,30 @@
         </li>
     </ul>
 </nav>
-
 <div class="container-fluid">
     <div class="row">
         <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse">
             <div class="sidebar-sticky pt-3">
                 <ul class="nav flex-column">
                     <li class="nav-item">
-                        <a class="nav-link active" href="index.html">
-                            <span data-feather="home"></span>
+                        <a class="nav-link " href="index.html">
                             <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-house-door-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M6.5 10.995V14.5a.5.5 0 0 1-.5.5H2a.5.5 0 0 1-.5-.5v-7a.5.5 0 0 1 .146-.354l6-6a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 .146.354v7a.5.5 0 0 1-.5.5h-4a.5.5 0 0 1-.5-.5V11c0-.25-.25-.5-.5-.5H7c-.25 0-.5.25-.5.495z"/>
                                 <path fill-rule="evenodd" d="M13 2.5V6l-2-2V2.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5z"/>
                             </svg>
-                            Dashboard <span class="sr-only">(current)</span>
+                            Dashboard
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">
-                            <span data-feather="file"></span>
+                        <a class="nav-link active" href="manage-customers.html">
                             <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-people-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                                 <path fill-rule="evenodd" d="M7 14s-1 0-1-1 1-4 5-4 5 3 5 4-1 1-1 1H7zm4-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm-5.784 6A2.238 2.238 0 0 1 5 13c0-1.355.68-2.75 1.936-3.72A6.325 6.325 0 0 0 5 9c-4 0-5 3-5 4s1 1 1 1h4.216zM4.5 8a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5z"/>
                             </svg>
-                            Manage Customers
+                            Manage Customers<span class="sr-only">(current)</span>
                         </a>
                     </li>
-
                     <li class="nav-item">
-                        <a class="nav-link" href="#">
-                            <span data-feather="users"></span>
+                        <a class="nav-link" href="manage-items.html">
                             <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-card-list" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                                 <path fill-rule="evenodd" d="M14.5 3h-13a.5.5 0 0 0-.5.5v9a.5.5 0 0 0 .5.5h13a.5.5 0 0 0 .5-.5v-9a.5.5 0 0 0-.5-.5zm-13-1A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5v-9A1.5 1.5 0 0 0 14.5 2h-13z"/>
                                 <path fill-rule="evenodd" d="M5 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 5 8zm0-2.5a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5zm0 5a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5z"/>
@@ -172,18 +158,15 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">
-                            <span data-feather="bar-chart-2"></span>
+                        <a class="nav-link" href="place-orders.html">
                             <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-cart-check-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                                 <path fill-rule="evenodd" d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1H.5zM4 14a1 1 0 1 1 2 0 1 1 0 0 1-2 0zm7 0a1 1 0 1 1 2 0 1 1 0 0 1-2 0zm.354-7.646a.5.5 0 0 0-.708-.708L8 8.293 6.854 7.146a.5.5 0 1 0-.708.708l1.5 1.5a.5.5 0 0 0 .708 0l3-3z"/>
                             </svg>
-
                             Place Orders
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">
-                            <span data-feather="layers"></span>
+                        <a class="nav-link" href="search-orders.html">
                             <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-search" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                                 <path fill-rule="evenodd" d="M10.442 10.442a1 1 0 0 1 1.415 0l3.85 3.85a1 1 0 0 1-1.414 1.415l-3.85-3.85a1 1 0 0 1 0-1.415z"/>
                                 <path fill-rule="evenodd" d="M6.5 12a5.5 5.5 0 1 0 0-11 5.5 5.5 0 0 0 0 11zM13 6.5a6.5 6.5 0 1 1-13 0 6.5 6.5 0 0 1 13 0z"/>
@@ -192,72 +175,98 @@
                         </a>
                     </li>
                 </ul>
-
-
             </div>
         </nav>
 
         <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-md-4">
+
             <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
-                <h1 >Dashboard POS System</h1>
-                <div class="btn-toolbar mb-2 mb-md-0">
-                    <div class="btn-group mr-2">
+                <h1 class="h2">Customers</h1>
+            </div>
+            <div class="row">
 
+            </div>
+
+
+            <table class="table table-bordered table-dark ">
+                <thead>
+                <tr>
+                <tr class="">
+                    <th scope="col">Customer ID</th>
+                    <th scope="col">Mr./Mrs./Ms.</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">Address</th>
+                    <th scope="col">Contact No</th>
+                    <th scope="col">Email</th>
+                    <th scope="col"></th>
+                    <th scope="col"></th>
+
+                </tr>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <th scope="row">C003</th>
+                    <td>Mr.</td>
+                    <td>Sajeewa</td>
+                    <td>Apura</td>
+                    <td>0711234567</td>
+                    <td>abc@gmail.com</td>
+                    <td><button type="button" class="btn btn-warning">Edit</button></td>
+                    <td><button type="button" class="btn btn-info">Delete</button></td>
+                </tr>
+                <tr>
+                    <th scope="row">C003</th>
+                    <td>Mr.</td>
+                    <td>Sajeewa</td>
+                    <td>Apura</td>
+                    <td>0711234567</td>
+                    <td>abc@gmail.com</td>
+                    <td><button type="button" class="btn btn-warning">Edit</button></td>
+                    <td><button type="button" class="btn btn-info">Delete</button></td>
+                </tr>
+
+                </tbody>
+            </table>
+            <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+                <h1 class="h2">Add a New Customer</h1>
+            </div>
+            <form>
+                <div class="row">
+                    <div class="form-group  col-xs-12 col-sm-3 col-md-3 col-lg-3 col-xl-1">
+                        <label >Designation</label>
+                        <select class="form-control" id="FormControlSelect1">
+                            <option>Mr.</option>
+                            <option>Mrs.</option>
+                            <option>Ms.</option>
+                        </select>
                     </div>
-
-                </div>
-            </div>
-<div class="details">
-
-            <div width="200" class="card" style="width: 14rem;">
-                <img id="icon-img1" class="card-img-top"   src="assets/customer.png" alt="Card image cap">
-                <div class="card-body">
-                    <h5  class="card-title ">Customers</h5>
-                    <p class="card-text"></p>
-                    <div class="card-con">
-                        <a href="#" class="btn btn-success">Click Here</a>
+                    <div class="form-group  col-xs-12 col-sm-4  col-xl-2">
+                        <label>Name:</label>
+                        <input type="text" class="form-control" id="name"  placeholder="Enter Name">
+                    </div>
+                    <div class="form-group col-xs-12 col-sm-5  col-xl-4">
+                        <label>Address:</label>
+                        <input type="text" class="form-control" id="address" placeholder="Enter Address">
+                    </div>
+                    <div class="form-group  col-xs-12 col-sm-5 col-xl-2">
+                        <label>Contact No:</label>
+                        <input type="text" class="form-control" id="contactNo" placeholder="Enter Contact No">
+                    </div>
+                    <div class="form-group  col-xs-12 col-sm-7  col-xl-3">
+                        <label>Email: </label>
+                        <input type="text" class="form-control" id="email"  placeholder="Enter Email">
                     </div>
                 </div>
-            </div>
-            <div   class="card" style="width: 14rem;">
-                <img id="icon-img2" class="card-img-top"   src="assets/items.png" alt="Card image cap">
-                <div class="card-body">
-                    <h5 class="card-title ">Items</h5>
-                    <p class="card-text"></p>
-                    <div class="card-con">
-                    <a href="#" class="btn btn-primary">Click Here</a>
-                    </div>
-                </div>
-            </div>
-    <div width="200" class="card" style="width: 14rem;">
-        <img id="icon-img3"  class="card-img-top" width="250" height="220"  src="assets/orders.png" alt="Card image cap">
-        <div class="card-body">
-            <h5 class="card-title ">Customers</h5>
-            <p class="card-text"></p>
-            <div class="card-con">
-                <a href="#" class="btn btn-danger">Click Here</a>
-            </div>
-        </div>
-    </div>
-
-
-
-</div>
-
-
-            <footer>
-                <strong>Copyright &copy; 2020 <a href="http://ijse.lk">ijse.lk</a>.</strong>
-                All rights reserved.
-                <div class="float-right d-none d-sm-inline-block">
-                    <b>Version</b> 1.0.0
-                </div>
-            </footer>
-
-
+                <button type="button" class="btn btn-primary">Add</button>
+            </form>
 
         </main>
     </div>
+
+
 </div>
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" ></script>
-<script src="node_modules/bootstrap/dist/js/bootstrap.min.js"  ></script></body>
+<script src="node_modules/bootstrap/dist/js/bootstrap.min.js"  ></script>
+</body>
 </html>
