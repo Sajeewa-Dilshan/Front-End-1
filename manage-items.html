@@ -9,6 +9,28 @@
     <link href="node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
     <style>
 
+        #btn-anim1:hover{
+            animation-name: btn-scale;
+            animation-duration:0.2s;
+            animation-iteration-count: 2;
+
+        }
+
+        @keyframes btn-scale {
+            0% {
+
+                transform: scale(1);
+            }
+            50%{
+                transform: scale(1.2);
+            }
+
+            100% {
+
+                transform: scale(1);
+            }
+        }
+
         #css-ip1 {
             padding: 4px;
             font-size: 16px;
@@ -264,7 +286,7 @@
                     </div>
 
                 </div>
-                <button type="button" class="btn btn-success">Add</button>
+                <button id="btn-anim1" type="button" class="btn btn-success">Add</button>
             </form>
 
         </main>
