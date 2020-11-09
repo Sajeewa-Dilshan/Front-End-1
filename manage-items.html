@@ -9,6 +9,40 @@
     <link href="node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
     <style>
 
+        @media all and (min-width: 320px) and (max-width: 760px) {
+            .welcome{
+                visibility: hidden;
+            }
+
+
+        }
+        .welcome{
+            overflow: hidden;
+            color: #007bff;
+            animation-name: color;
+            animation-duration:20s;
+            animation-iteration-count: infinite;
+            justify-content: center;
+
+        }
+        @keyframes color {
+            0% {
+                color: orangered;
+
+            }
+            20% {
+                color: orange;
+
+            }
+            80% {
+                color: yellow;
+            }
+            100% {
+                color: green;
+
+            }
+        }
+
         #description:hover{
 
             animation-name: txt-anim;
@@ -44,13 +78,18 @@
     </style>
 </head>
 <body>
-<nav class="navbar navbar-dark sticky-top bg-dark d-flex justify-content-start  p-0 shadow">
-    <a class="navbar-brand col-md-3 col-lg-2 mr-0 px-3 " href="#">Web POS</a>
-    <div  class="company-name-wrap"><h1 class="display-5 pl-5 text-danger font-weight-bold" id="company-name">IJSE</h1>
-    </div>
+<nav class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0 shadow">
+    <a class="navbar-brand col-md-3 col-lg-2 mr-0 px-3" href="#">SDK</a>
     <button class="navbar-toggler position-absolute d-md-none collapsed" type="button" data-toggle="collapse" data-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
+    <!-- <input class="form-control form-control-dark w-100" type="text" placeholder="Search" aria-label="Search">-->
+    <h1 class="welcome">Welcome to DEP6 Pos System </h1>
+    <ul class="navbar-nav px-3">
+        <li class="nav-item text-nowrap">
+
+        </li>
+    </ul>
 </nav>
 <div class="container-fluid">
     <div class="row">
