@@ -8,6 +8,36 @@
     <title>DEP Web POS - Customers</title>
     <link href="node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
     <style>
+
+        #btn-anim1:hover{
+            animation-name: btn-scale;
+            animation-duration:0.2s;
+            animation-iteration-count: 2;
+
+        }
+        #btn-anim2:hover{
+            animation-name: btn-scale;
+            animation-duration:0.2s;
+            animation-iteration-count: 2;
+
+        }
+
+        @keyframes btn-scale {
+            0% {
+
+                transform: scale(1);
+            }
+            50%{
+                transform: scale(1.2);
+            }
+
+            100% {
+
+                transform: scale(1);
+            }
+        }
+
+
         #css-ip1 {
             padding: 4px;
             font-size: 16px;
@@ -314,7 +344,7 @@
                 </div>
             </form>
 
-            <button type="button" class="btn btn-success">
+            <button id="btn-anim1" type="button" class="btn btn-success">
                 Submit
             </button>
 
@@ -370,7 +400,7 @@
                 <label class="mr-2 font-weight-bold">Total Amount:</label>
                 <label id="order-total" class="mr-5 font-weight-bold">Rs. 3000</label>
 
-                <button type="button" class="btn btn-danger ">
+                <button id="btn-anim2" type="button" class="btn btn-danger ">
                     Place your order
 
                 </button>
