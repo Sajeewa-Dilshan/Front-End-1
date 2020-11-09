@@ -7,16 +7,61 @@
     <meta name="author" content="DEP">
     <title>DEP Web POS - Customers</title>
     <link href="node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/place-orders.css">
+    <style>
+
+        @media all and (min-width: 320px) and (max-width: 760px) {
+            .welcome{
+                visibility: hidden;
+            }
+
+
+        }
+        .welcome{
+            overflow: hidden;
+            color: #007bff;
+            animation-name: color;
+            animation-duration:20s;
+            animation-iteration-count: infinite;
+            justify-content: center;
+
+        }
+        @keyframes color {
+            0% {
+                color: orangered;
+
+            }
+            20% {
+                color: orange;
+
+            }
+            80% {
+                color: yellow;
+            }
+            100% {
+                color: green;
+
+            }
+        }
+        .row{
+            display: flex;
+
+        }
+
+    </style>
 </head>
 <body>
-<nav class="navbar navbar-dark sticky-top bg-dark d-flex justify-content-start  p-0 shadow">
-    <a class="navbar-brand col-md-3 col-lg-2 mr-0 px-3 " href="#">Web POS</a>
-    <div  class="company-name-wrap"><h1 class="display-5 pl-5 text-danger font-weight-bold" id="company-name">IJSE</h1>
-    </div>
+<nav class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0 shadow">
+    <a class="navbar-brand col-md-3 col-lg-2 mr-0 px-3" href="#">SDK</a>
     <button class="navbar-toggler position-absolute d-md-none collapsed" type="button" data-toggle="collapse" data-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
+    <!-- <input class="form-control form-control-dark w-100" type="text" placeholder="Search" aria-label="Search">-->
+    <h1 class="welcome">Welcome to DEP6 Pos System </h1>
+    <ul class="navbar-nav px-3">
+        <li class="nav-item text-nowrap">
+
+        </li>
+    </ul>
 </nav>
 <div class="container-fluid">
     <div class="row">
@@ -80,7 +125,7 @@
             </div>
             <form>
                 <div class="row">
-                    <div class="form-group  col-xs-12 col-sm-3 col-md-3 col-lg-3 col-xl-1">
+                    <div  class="form-group  col-xs-12 col-sm-3 col-md-3 col-lg-3 col-xl-1">
                         <label >Customer ID</label>
                         <select class="form-control" id="c-FormControlSelect">
                             <option>C001</option>
@@ -90,19 +135,19 @@
                     </div>
                     <div class="form-group  col-xs-12 col-sm-4  col-xl-2">
                         <label>Name:</label>
-                        <input type="text" class="form-control" id="c-name"  >
+                        <input id="css-ip1" type="text" class="form-control" id="c-name"  >
                     </div>
                     <div class="form-group col-xs-12 col-sm-5  col-xl-4">
                         <label>Address:</label>
-                        <input type="text" class="form-control" id="address" >
+                        <input id="css-ip2" type="text" class="form-control" id="address" >
                     </div>
                     <div class="form-group  col-xs-12 col-sm-5 col-xl-2">
                         <label>Contact No:</label>
-                        <input type="text" class="form-control" id="contactNo" p>
+                        <input id="css-ip3" type="text" class="form-control" id="contactNo" p>
                     </div>
                     <div class="form-group  col-xs-12 col-sm-7  col-xl-3">
                         <label>Email: </label>
-                        <input type="text" class="form-control" id="email"  >
+                        <input id="css-ip4" type="text" class="form-control" id="email"  >
                     </div>
                 </div>
             </form>
@@ -117,33 +162,25 @@
                             <option>I003</option>
                             \                        </select>
                     </div>
-                    <div class="form-group  col-xs-12 col-sm-3  col-xl-2">
-                        <label>Name:</label>
-                        <input type="text" class="form-control" id="i-name" >
-                    </div>
+
                     <div class="form-group  col-xs-12 col-sm-6  col-xl-4">
                         <label>Description:</label>
-                        <input type="text" class="form-control" id="description" >
+                        <input  id="css-ip6" type="text" class="form-control" id="description" >
                     </div>
-                    <div class="form-group  col-xs-12 col-sm-4 col-xl-2">
-                        <label>Discount %: </label>
-                        <input type="text" class="form-control" id="discount" >
-                    </div>
+
                     <div class="form-group  col-xs-12 col-sm-4 col-xl-2">
                         <label>Unit Price:</label>
-                        <input type="text" class="form-control" id="unit-price" >
+                        <input id="css-ip8" type="text" class="form-control" id="unit-price" >
                     </div>
                     <div class="form-group col-xs-12 col-sm-4  col-xl-1">
                         <label>Quantity:</label>
-                        <input type="text" class="form-control" id="qty-on-hand"  >
+                        <input id="css-ip9" type="text" class="form-control" id="qty-on-hand"  >
                     </div>
                 </div>
             </form>
 
-            <button type="button" class="btn btn-primary">
-                <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-cart-plus-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                    <path fill-rule="evenodd" d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1H.5zM4 14a1 1 0 1 1 2 0 1 1 0 0 1-2 0zm7 0a1 1 0 1 1 2 0 1 1 0 0 1-2 0zM9 5.5a.5.5 0 0 0-1 0V7H6.5a.5.5 0 0 0 0 1H8v1.5a.5.5 0 0 0 1 0V8h1.5a.5.5 0 0 0 0-1H9V5.5z"/>
-                </svg>
+            <button type="button" class="btn btn-success">
+                Submit
             </button>
 
             <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
@@ -151,64 +188,56 @@
             </div>
 
             <div class="row">
-                <table class=" table table-striped table-bordered table-hover table-responsive">
-                    <thead class="thead-dark">
-                    <tr >
+                <table class="table table-bordered table-dark ">
+                    <thead>
+                    <tr>
+                    <tr class="">
                         <th scope="col">Item Code</th>
-                        <th scope="col">Name</th>
                         <th scope="col">Description</th>
-                        <th scope="col">Discount</th>
+                        <th scope="col">Quantity on Hand</th>
                         <th scope="col">Unit Price (Rs.)</th>
-                        <th scope="col">Quantity</th>
-                        <th scope="col">Total (Rs.)</th>
                         <th scope="col"></th>
                         <th scope="col"></th>
+
+                    </tr>
                     </tr>
                     </thead>
                     <tbody>
                     <tr>
                         <th scope="row">I001</th>
-                        <td>Marmite</td>
-                        <td>Sticky, dark brown food paste</td>
-                        <td>10%</td>
+                        <td>Dhal</td>
+                        <td>200</td>
                         <td>180</td>
-                        <td>2</td>
-                        <td>360</td>
-                        <td><button type="button" class="btn btn-success">Edit</button></td>
-                        <td><button type="button" class="btn btn-danger">Delete</button></td>
+                        <td><button type="button" class="btn btn-warning">Edit</button></td>
+                        <td><button type="button" class="btn btn-info">Delete</button></td>
                     </tr>
                     <tr>
-                        <th scope="row">I002</th>
-                        <td>Pringles</td>
-                        <td>Potato-based chips</td>
-                        <td>10%</td>
-                        <td>880</td>
-                        <td>3</td>
-                        <td>2640</td>
-                        <td><button type="button" class="btn btn-success">Edit</button></td>
-                        <td><button type="button" class="btn btn-danger">Delete</button></td>
+                        <th scope="row">I001</th>
+                        <td>Banana</td>
+                        <td>200</td>
+                        <td>230</td>
+                        <td><button type="button" class="btn btn-warning">Edit</button></td>
+                        <td><button type="button" class="btn btn-info">Delete</button></td>
                     </tr>
+
                     <tr>
-                        <th scope="row">I003</th>
-                        <td>Daily</td>
-                        <td>Flavored milk</td>
-                        <td>5%</td>
+                        <th scope="row">I001</th>
+                        <td>Apple</td>
+                        <td>100</td>
                         <td>50</td>
-                        <td>10</td>
-                        <td>500</td>
-                        <td><button type="button" class="btn btn-success">Edit</button></td>
-                        <td><button type="button" class="btn btn-danger">Delete</button></td>
+                        <td><button type="button" class="btn btn-warning">Edit</button></td>
+                        <td><button type="button" class="btn btn-info">Delete</button></td>
                     </tr>
+
                     </tbody>
                 </table>
 
-                <label class="mr-2 font-weight-bold">Order Total:</label>
-                <label id="order-total" class="mr-5 font-weight-bold">3500 LKR</label>
+                <label class="mr-2 font-weight-bold">Total Amount:</label>
+                <label id="order-total" class="mr-5 font-weight-bold">Rs. 3000</label>
 
-                <button type="button" class="btn btn-primary ">
-                    <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-cart-check-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                        <path fill-rule="evenodd" d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1H.5zM4 14a1 1 0 1 1 2 0 1 1 0 0 1-2 0zm7 0a1 1 0 1 1 2 0 1 1 0 0 1-2 0zm.354-7.646a.5.5 0 0 0-.708-.708L8 8.293 6.854 7.146a.5.5 0 1 0-.708.708l1.5 1.5a.5.5 0 0 0 .708 0l3-3z"/>
-                    </svg>
+                <button type="button" class="btn btn-danger ">
+                    Place your order
+
                 </button>
 
             </div>
