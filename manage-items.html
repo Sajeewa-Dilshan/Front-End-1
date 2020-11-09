@@ -7,7 +7,41 @@
     <meta name="author" content="DEP">
     <title>DEP Web POS - Customers</title>
     <link href="node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/manage-items.css">
+    <style>
+
+        #description:hover{
+
+            animation-name: txt-anim;
+            animation-duration: 0.5s;
+            animation-iteration-count: 2;
+        }
+        #unit-price:hover{
+
+            animation-name: txt-anim;
+            animation-duration: 0.5s;
+            animation-iteration-count: 2;
+        }
+        #qty-on-hand:hover{
+
+            animation-name: txt-anim;
+            animation-duration: 0.5s;
+            animation-iteration-count: 2;
+        }
+
+        @keyframes txt-anim {
+            0%{
+                background-color: mistyrose;
+            }
+
+            50%{
+                background-color: mistyrose;
+            }
+            100%{
+                background-color: mistyrose;
+            }
+
+        }
+    </style>
 </head>
 <body>
 <nav class="navbar navbar-dark sticky-top bg-dark d-flex justify-content-start  p-0 shadow">
@@ -100,25 +134,25 @@
                         <td>Dhal</td>
                         <td>200</td>
                         <td>180</td>
-                        <td><button type="button" class="btn btn-success">Edit</button></td>
-                        <td><button type="button" class="btn btn-danger">Delete</button></td>
+                        <td><button type="button" class="btn btn-warning">Edit</button></td>
+                        <td><button type="button" class="btn btn-info">Delete</button></td>
                     </tr>
                     <tr>
                         <th scope="row">I001</th>
-                        <td>Dhal</td>
+                        <td>Banana</td>
                         <td>200</td>
-                        <td>180</td>
-                        <td><button type="button" class="btn btn-success">Edit</button></td>
-                        <td><button type="button" class="btn btn-danger">Delete</button></td>
+                        <td>230</td>
+                        <td><button type="button" class="btn btn-warning">Edit</button></td>
+                        <td><button type="button" class="btn btn-info">Delete</button></td>
                     </tr>
 
                     <tr>
                         <th scope="row">I001</th>
-                        <td>Dhal</td>
-                        <td>200</td>
-                        <td>180</td>
-                        <td><button type="button" class="btn btn-success">Edit</button></td>
-                        <td><button type="button" class="btn btn-danger">Delete</button></td>
+                        <td>Apple</td>
+                        <td>100</td>
+                        <td>50</td>
+                        <td><button type="button" class="btn btn-warning">Edit</button></td>
+                        <td><button type="button" class="btn btn-info">Delete</button></td>
                     </tr>
 
                     </tbody>
@@ -129,10 +163,7 @@
             </div>
             <form>
                 <div class="row">
-                    <div class="form-group  col-xs-12 col-sm-4 col-xl-2">
-                        <label >Name:</label>
-                        <input type="text" class="form-control" id="name" placeholder="Enter Name">
-                    </div>
+
                     <div class="form-group  col-xs-12 col-sm-8  col-xl-4">
                         <label>Description:</label>
                         <input type="text" class="form-control" id="description"  placeholder="Enter Description">
@@ -145,18 +176,9 @@
                         <label>Unit Price:</label>
                         <input type="text" class="form-control" id="unit-price"  placeholder="Enter Unit Price">
                     </div>
-                    <div class="form-group  col-xs-12 col-sm-4 col-xl-2">
-                        <label>Discount %: </label>
-                        <select class="form-control" id="FormControlSelect1">
-                            <option>0</option>
-                            <option>5%</option>
-                            <option>10%</option>
-                            <option>15%</option>
-                            <option>20%</option>
-                        </select>
-                    </div>
+
                 </div>
-                <button type="button" class="btn btn-primary">Add</button>
+                <button type="button" class="btn btn-success">Add</button>
             </form>
 
         </main>
